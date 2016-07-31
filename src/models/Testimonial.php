@@ -4,9 +4,7 @@ namespace Acme\Models;
 // Note path directories separated with backslash (\) not forward slash (/)
 use Illuminate\Database\Eloquent\Model as Eloquent;
 
-class User extends Eloquent
+class Testimonial extends Eloquent
 {
-
-  
 
 }
