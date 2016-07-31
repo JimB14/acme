@@ -21,21 +21,21 @@
     <!-- Wrapper for slides -->
     <div class="carousel-inner" role="listbox">
         <div class="item active">
-          <img src="assets/slider/1.jpg" alt="...">
+          <img src="assets/slider/1b.jpg" alt="...">
           <div class="carousel-caption">
             Acme Nature Tours
           </div>
         </div>
 
         <div class="item">
-          <img src="assets/slider/2.jpg" alt="...">
+          <img src="assets/slider/2b.jpg" alt="...">
           <div class="carousel-caption">
             Experience Nature as Never Before
           </div>
         </div>
 
         <div class="item">
-          <img src="assets/slider/3.jpg" alt="...">
+          <img src="assets/slider/3b.jpg" alt="...">
           <div class="carousel-caption">
             Register Now
           </div>
