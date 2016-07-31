@@ -6,7 +6,9 @@ use Illuminate\Database\Eloquent\Model as Eloquent;
 
 class User extends Eloquent
 {
-
-  
-
+    // Get all testimonials associated with a particular user
+    public function testimonials()
+    {
+      return $this->hasMany('Acme\models\Testimonial');
+    }
 }

@@ -42,6 +42,8 @@
 
     @yield('content')
 
+  </div><!-- // .container -->
+
     <div class="row footer-background" style=" margin-top:50px;">
           <div class="col-md-3">
               <div style="padding-left:8px;">
@@ -62,7 +64,7 @@
           </div>
     </div>
 
-  </div><!-- // .container -->
+
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
   <script src="https://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
