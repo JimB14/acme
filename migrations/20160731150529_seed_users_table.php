@@ -13,7 +13,7 @@ class SeedUsersTable extends AbstractMigration
             INSERT INTO users
             (first_name, last_name, email, password)
             VALUES
-            ('Jim', 'Burns', 'jim.burns14@gmail.com', '$password_hash')
+            ('Jim', 'Burns', 'jim.burns14@gmail.com', '$password_hash', '1', '2')
         ");
     }
 
