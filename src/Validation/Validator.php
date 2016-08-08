@@ -20,7 +20,7 @@ class Validator
           foreach($rules as $rule)
           {
             $exploded = explode(":", $rule);
-            
+
 
               switch($exploded[0])
               {
@@ -43,6 +43,15 @@ class Validator
                       if(Valid::equals($_REQUEST[$name])->validate($_REQUEST[$exploded[1]]) == false)
                       {
                         $errors[] = "Values do not match. Please try again.";
+                      }
+                      break;
+
+                  case 'unique':
+                      $model = "Acme\\models\\" . $exploded[1];
+                      $table = new $model;                      
+                      $results = $table::where($name, '=', $_REQUEST[$name])->get();
+                      foreach($results as $item){
+                        $errors[] = $_REQUEST[$name] . " already exists in this system.";
                       }
                       break;
 
