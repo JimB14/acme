@@ -1,5 +1,5 @@
 <?php
-namespace Acme\Controllers;
+namespace Acme\controllers;
 
 use duncan3dc\Laravel\BladeInstance;
 use Acme\models\Page;
@@ -14,8 +14,9 @@ class PageController extends BaseController
 
   public function getShowPage()
   {
-      $browser_title  = '';
+      $browser_title = '';
       $page_content = '';
+      $page_id = 0;
 
       // extract page name from url
       $uri = explode("/", $_SERVER['REQUEST_URI']);
@@ -29,11 +30,11 @@ class PageController extends BaseController
       {
           $browser_title  = $item->browser_title;
           $page_content = $item->page_content;
+          $page_id = $item->id;
       }
 
       if(strlen($browser_title) == 0)
       {
-        header("HTTP/1.0 404 Not Found");
         header("Location: /page-not-found");
         exit();
       }
@@ -41,12 +42,14 @@ class PageController extends BaseController
       // pass content to blade template
       echo $this->blade->render('generic-page', [
           'browser_title' => $browser_title,
-          'page_content' => $page_content
+          'page_content'  => $page_content,
+          'page_id'       => $page_id,
       ]);
   }
 
   public function getShow404()
   {
+    header("HTTP/1.0 404 Not Found");
     echo $this->blade->render('page-not-found');
   }
 

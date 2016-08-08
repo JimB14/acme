@@ -1,4 +1,50 @@
 .empty-well{background: transparent;}
 .bigger-icon{font-size: 48px;}
-.footer-background{background:#000;color:#fff;}
+/*.footer-background{background:#000;color:#fff;}*/
 .error{color: #ff0000;}
+/* http://stackoverflow.com/questions/18153234/center-a-column-using-twitter-bootstrap-3 */
+.col-center-block {
+   float: none;
+   display: block;
+   margin-left: auto;
+   margin-right: auto;
+}
+.box-with-border{
+  margin-top: 30px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  padding: 20px 30px;
+  /*height: 100%;*/
+  width: 100%;
+}
+.box-with-border h1 {margin:0px;}
+/* Sticky footer styles --- */
+html {
+  position: relative;
+  min-height: 100%;
+}
+body {
+  /* Margin bottom by footer height; sets distance from bottom of body equal to h
+  height of footer */
+  margin-bottom: 137px;
+}
+.footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  /* Set the fixed height of the footer here */
+  height: 137px;
+  background-color: #000;
+  color: #fff;
+}
+/* admin classes */
+.admin-hidden {
+    display: none;
+}
+.admin-display {
+    display:inline-block;
+}
+.outlined {
+    border: 1px solid red;
+}
+.browser-title {width: 17em; padding-left:7px;}
